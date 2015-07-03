@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoe-board" id="Mzv-Qe-RYJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Kn-vZ-wku">
+                                <rect key="frame" x="122" y="361" width="83" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="u4v-2t-xIL" appends="YES" id="yB4-V9-Baw"/>
+                                    <outletCollection property="gestureRecognizers" destination="u4v-2t-xIL" appends="YES" id="gSv-cZ-HyZ"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wyr-Zx-Rnx">
+                                <rect key="frame" x="201" y="361" width="83" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LiY-Ki-KFP" appends="YES" id="hYT-Gn-RH9"/>
+                                    <outletCollection property="gestureRecognizers" destination="LiY-Ki-KFP" appends="YES" id="Jdh-D2-0Wb"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dko-As-Bwd">
+                                <rect key="frame" x="39" y="357" width="79" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tI6-qT-ab8" appends="YES" id="o5q-ws-NOh"/>
+                                    <outletCollection property="gestureRecognizers" destination="tI6-qT-ab8" appends="YES" id="l2Y-Nn-zW2"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ncc-bg-8t0">
+                                <rect key="frame" x="39" y="216" width="79" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nk6-FU-fjP" appends="YES" id="wjx-xq-elx"/>
+                                    <outletCollection property="gestureRecognizers" destination="nk6-FU-fjP" appends="YES" id="Xkg-64-r85"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="d1H-S0-3Py">
+                                <rect key="frame" x="122" y="215" width="79" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V2K-yY-e2r" appends="YES" id="uIJ-ds-wZd"/>
+                                    <outletCollection property="gestureRecognizers" destination="V2K-yY-e2r" appends="YES" id="SZu-CI-S16"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="b7J-AA-IMw">
+                                <rect key="frame" x="201" y="216" width="79" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Jhr-sW-56c" appends="YES" id="zv9-vS-pKp"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jhr-sW-56c" appends="YES" id="bX6-fm-4ay"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uyZ-IO-6bG">
+                                <rect key="frame" x="201" y="77" width="79" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Gvk-yd-Ehm" appends="YES" id="YdR-FA-c47"/>
+                                    <outletCollection property="gestureRecognizers" destination="Gvk-yd-Ehm" appends="YES" id="YF9-Vt-fDW"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yeu-A7-Lq0">
+                                <rect key="frame" x="39" y="77" width="82" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dCf-QA-7WA" appends="YES" id="oQT-iZ-WYz"/>
+                                    <outletCollection property="gestureRecognizers" destination="dCf-QA-7WA" appends="YES" id="X73-Rs-iAB"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kVE-DN-8fg">
+                                <rect key="frame" x="122" y="77" width="79" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cof-XQ-OV7" appends="YES" id="9NF-3t-vd9"/>
+                                </connections>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Woy-ri-CDo">
+                                <rect key="frame" x="201" y="518" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onToggleAI:" destination="BYZ-38-t0r" eventType="valueChanged" id="HSq-hC-Pep"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eot-d9-4Pm">
+                                <rect key="frame" x="59" y="523" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoe-X" id="8GA-EL-Z9z">
+                                <rect key="frame" x="62" y="20" width="59" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ou7-Ol-xh6" appends="YES" id="iw6-OG-HiS"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoe-O" id="3zc-R5-E8h">
+                                <rect key="frame" x="201" y="20" width="59" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="as1-km-4b0" appends="YES" id="oEf-Pr-Qlz"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="boardB1" destination="dCf-QA-7WA" id="zem-iG-j2L"/>
+                        <outlet property="boardB2" destination="cof-XQ-OV7" id="cDJ-vx-cXm"/>
+                        <outlet property="boardB3" destination="Gvk-yd-Ehm" id="NO9-uz-Xdc"/>
+                        <outlet property="boardB4" destination="nk6-FU-fjP" id="0LF-Zw-hK9"/>
+                        <outlet property="boardB5" destination="V2K-yY-e2r" id="L8b-9v-ibC"/>
+                        <outlet property="boardB6" destination="Jhr-sW-56c" id="NPP-i4-nGW"/>
+                        <outlet property="boardB7" destination="tI6-qT-ab8" id="jV3-yq-KQb"/>
+                        <outlet property="boardB8" destination="u4v-2t-xIL" id="fFP-vC-TbN"/>
+                        <outlet property="boardB9" destination="LiY-Ki-KFP" id="5kO-hd-uzv"/>
+                        <outlet property="boardImg1" destination="yeu-A7-Lq0" id="G6y-vb-vQg"/>
+                        <outlet property="boardImg2" destination="kVE-DN-8fg" id="Xuh-ri-pEP"/>
+                        <outlet property="boardImg3" destination="uyZ-IO-6bG" id="iVi-lg-F2q"/>
+                        <outlet property="boardImg4" destination="ncc-bg-8t0" id="qpO-u2-OaY"/>
+                        <outlet property="boardImg5" destination="d1H-S0-3Py" id="2Dh-v1-MLg"/>
+                        <outlet property="boardImg6" destination="b7J-AA-IMw" id="GSV-ce-vMt"/>
+                        <outlet property="boardImg7" destination="dko-As-Bwd" id="ddP-Nc-hMM"/>
+                        <outlet property="boardImg8" destination="9Kn-vZ-wku" id="rB9-Mp-p8n"/>
+                        <outlet property="boardImg9" destination="wyr-Zx-Rnx" id="m6a-YK-4kS"/>
+                        <outlet property="singlePlayerSwitch" destination="Woy-ri-CDo" id="Ivr-ay-Do1"/>
+                        <outlet property="xGestureRecognizer" destination="ou7-Ol-xh6" id="CF0-pa-yY9"/>
+                        <outlet property="xImageDrag" destination="8GA-EL-Z9z" id="Fs5-It-bfY"/>
+                        <outlet property="yGestureRecognizer" destination="as1-km-4b0" id="wVe-Uj-2Gz"/>
+                        <outlet property="yImageDrag" destination="3zc-R5-E8h" id="R9N-Ia-TmR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gvk-yd-Ehm">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="ja0-Sn-ixI"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ej6-uc-f7L"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nk6-FU-fjP">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="VvP-mm-ENt"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="VA7-j7-DfR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="V2K-yY-e2r">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="7Kf-vj-2db"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="GVp-QP-a8g"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Jhr-sW-56c">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="ay8-IY-ozz"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="7eN-HU-M2K"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tI6-qT-ab8">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="zc2-zw-uQF"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="9f8-Qs-8JX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="u4v-2t-xIL">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="UG0-Xa-KPq"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="QeL-xU-e1A"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LiY-Ki-KFP">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="SxZ-xd-iDQ"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="8yA-h1-eTL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dCf-QA-7WA">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="of3-Kz-Umt"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="pYa-Ng-zI2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="cof-XQ-OV7">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="onClickAction:" destination="BYZ-38-t0r" id="bKt-Pd-kSM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ou7-Ol-xh6">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="dragButtonAction:" destination="BYZ-38-t0r" id="AB5-wK-Klc"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Ule-y5-8u8"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="as1-km-4b0">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="dragButtonActionO:" destination="BYZ-38-t0r" id="dOg-Y1-93p"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="cTd-k1-gyV"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="234" y="343"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tictactoe-O" width="350" height="350"/>
+        <image name="tictactoe-X" width="200" height="200"/>
+        <image name="tictactoe-board" width="300" height="300"/>
+    </resources>
+</document>
