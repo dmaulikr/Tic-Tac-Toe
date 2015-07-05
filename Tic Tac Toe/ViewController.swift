@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     var xTurn = true
     let tapRec = UITapGestureRecognizer()
-    var AIEnabled = false
+    var AIEnabled = true
     
     var originalXLocation:CGPoint!
     var originalOLocation:CGPoint!
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         boardImg9.userInteractionEnabled = true
         xImageDrag.userInteractionEnabled = true
         yImageDrag.userInteractionEnabled = true
-        singlePlayerSwitch.setOn(false, animated: false)
+        singlePlayerSwitch.setOn(true, animated: false)
         
         boardImageLocation = [boardImg1, boardImg2, boardImg3, boardImg4, boardImg5, boardImg6, boardImg7, boardImg8, boardImg9]
         
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
     }
     
     /**
-    Function that runs if X has won the game. Displays notificaiton and resets the board
+    Function that runs if O has won the game. Displays notificaiton and resets the board
     **/
     func oWins(){
         let alert = UIAlertController(title: "Winner!", message: "O has won the game!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
     }
     
     /**
-    Function that runs if X has won the game. Displays notificaiton and resets the board
+    Function that runs if the AI has won the game. Displays notificaiton and resets the board
     **/
     func AIWins(){
         let alert = UIAlertController(title: "Winner!", message: "The AI has won the game!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -427,7 +427,7 @@ class ViewController: UIViewController {
     }
     
     /**
-    Function that places either an 'X' or 'O' on the tapped button, depending on whose turn it is (Determined by boolean xTurn
+    Function that places either an 'X' or 'O' on the tapped button, depending on whose turn it is (Determined by boolean xTurn)
     **/
     @IBAction func onClickAction(sender: UITapGestureRecognizer) {
         switch sender{
@@ -609,14 +609,14 @@ class ViewController: UIViewController {
         AIEnabled = !AIEnabled
         if(AIEnabled){
             singlePlayerSwitch.setOn(true, animated: true)
-            let alert = UIAlertController(title: "Multiplayer Mode", message: "AI has been enabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Singleplayer Mode", message: "AI has been enabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             
         }
         else{
             singlePlayerSwitch.setOn(false, animated: true)
-            let alert = UIAlertController(title: "Singleplayer Mode", message: "AI has been disabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Multiplayer Mode", message: "AI has been disabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
             
