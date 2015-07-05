@@ -109,11 +109,12 @@ class ViewController: UIViewController {
     func xWins(){
         
         let alert = UIAlertController(title: "Winner!", message: "X has won the game!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: {void in
+            self.resetBoard()
+        }))
         self.presentViewController(alert, animated: true, completion: nil)
         
         
-        resetBoard()
         
     }
     
@@ -122,10 +123,10 @@ class ViewController: UIViewController {
     **/
     func oWins(){
         let alert = UIAlertController(title: "Winner!", message: "O has won the game!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: {void in
+            self.resetBoard()
+        }))
         self.presentViewController(alert, animated: true, completion: nil)
-        
-        resetBoard()
         
     }
     
@@ -134,10 +135,11 @@ class ViewController: UIViewController {
     **/
     func AIWins(){
         let alert = UIAlertController(title: "Winner!", message: "The AI has won the game!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: {void in
+            self.resetBoard()
+        }))
         self.presentViewController(alert, animated: true, completion: nil)
         
-        resetBoard()
         
     }
     
@@ -160,10 +162,11 @@ class ViewController: UIViewController {
     **/
     func drawFunction(){
         let alert = UIAlertController(title: "Draw!", message: "The game has ended in a draw!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default, handler: {void in
+            self.resetBoard()
+        }))
         self.presentViewController(alert, animated: true, completion: nil)
         
-        resetBoard()
     }
     
     /**
@@ -605,19 +608,22 @@ class ViewController: UIViewController {
     Function to enable/disable the AI if the switch is toggled on/off
     **/
     @IBAction func onToggleAI(sender: AnyObject) {
-        resetBoard()
         AIEnabled = !AIEnabled
         if(AIEnabled){
             singlePlayerSwitch.setOn(true, animated: true)
             let alert = UIAlertController(title: "Singleplayer Mode", message: "AI has been enabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: {void in
+                self.resetBoard()
+            }))
             self.presentViewController(alert, animated: true, completion: nil)
             
         }
         else{
             singlePlayerSwitch.setOn(false, animated: true)
             let alert = UIAlertController(title: "Multiplayer Mode", message: "AI has been disabled. The game will now reset.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: {void in
+                self.resetBoard()
+            }))
             self.presentViewController(alert, animated: true, completion: nil)
             
         }
@@ -668,7 +674,7 @@ class ViewController: UIViewController {
     }
     
     /**
-        Function to drag the O-image and drop it onto the board. The function first gets the image to drag, and drags it. When the state has ended, the function checks to see if it is on a location in the board. If it is, the image is changed to an 'O' and the O-image is reset to its home location.
+    Function to drag the O-image and drop it onto the board. The function first gets the image to drag, and drags it. When the state has ended, the function checks to see if it is on a location in the board. If it is, the image is changed to an 'O' and the O-image is reset to its home location.
     **/
     @IBAction func dragButtonActionO(sender: UIPanGestureRecognizer) {
         var toDrag: UIImageView!
